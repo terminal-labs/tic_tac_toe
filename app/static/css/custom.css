@@ -1,18 +1,29 @@
+.no_selection {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.border {
+    border: 1px solid black;
+}
 .game_box {
     position: absolute;
     left: 0px;
     top: 0px;
     width: 900px;
     height: 900px;
-    border: 1px solid black;
     z-index: 0;
 }
 .game_cell {
     display: inline-block;
+    text-align: center;
     font-size:1200%;
     width: 298px;
     height: 298px;
-    border: 1px solid black;
     z-index: 0;
+    cursor: pointer;
 }
 
