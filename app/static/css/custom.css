@@ -1,0 +1,18 @@
+.game_box {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 900px;
+    height: 900px;
+    border: 1px solid black;
+    z-index: 0;
+}
+.game_cell {
+    display: inline-block;
+    font-size:1200%;
+    width: 298px;
+    height: 298px;
+    border: 1px solid black;
+    z-index: 0;
+}
+
