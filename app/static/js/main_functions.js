@@ -16,16 +16,14 @@ function apply_game_engine_response(response_dict)
     var game_state = response_dict['game_state'];
     var game_over_flag = response_dict['game_over_flag'];
     var game_winner = response_dict['game_winner'];
+
+    $.each(game_state, function(index, value) {
+        if(value == ' ') value = '&nbsp;'; // The actual html in the cell should be "&nbsp;", not " " because " " creates rendering issues.             
+        $('#cell_' + index ).html(value);
+    });
     if(game_over_flag == 1) // Using int flags here instead of Python's True/False bool type for python/JS compatibility.
     {
 	alert("Game Over " + game_winner);
-    }
-    else
-    {
-	$.each(game_state, function(index, value) {
-	    if(value == ' ') value = '&nbsp;'; // The actual html in the cell should be "&nbsp;", not " " because " " creates rendering issues.
-	    $('#cell_' + index ).html(value);
-	});
     }
 }
 
