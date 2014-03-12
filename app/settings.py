@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'static')
+
+ASSETS_ROOT = os.path.join(os.path.dirname(__file__), 'assets')
+
 TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(__file__), 'templates'),
 )
@@ -83,3 +87,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    ASSETS_ROOT,
+)
