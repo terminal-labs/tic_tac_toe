@@ -1,7 +1,7 @@
 jQuery.postJSON = function(url, args, callback) {
     var json_string = json.dumps(args);
-    var args_dict = {'json_string': json_string};
-    $.ajax({url: url, data: $.param(args_dict), dataType: 'text', type: 'GET',
+    var args_dict = {'json_string': json_string}; 
+    $.ajax({url: url, data: $.param(args_dict), dataType: 'text', type: 'POST',
             success: function(response) {
 		var json_string = response;
 		var response_dict = json.loads(json_string);
@@ -26,6 +26,6 @@ $(document).ready(function() {
 	    game_state.push(cell_contents);
 	});
 
-	$.postJSON('/game_engine/', game_state, apply_game_engine_response);
+	$.postJSON('/game_engine', game_state, apply_game_engine_response);
     });
 });

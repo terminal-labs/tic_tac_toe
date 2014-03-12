@@ -11,7 +11,7 @@ jQuery.postJSON = function(url, args, callback) {
 
 function apply_game_engine_response(response_dict)
 {
-    alert(response_dict);
+    
 }
 
 $(document).ready(function() {
