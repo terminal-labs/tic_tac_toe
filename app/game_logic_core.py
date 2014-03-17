@@ -86,10 +86,10 @@ def try_block(game_state):
 
 def try_fork_block(game_state):
     gs = game_state
-    if all_same(gs[5],gs[7],'x'):
+    if all_same(gs[5],gs[7],'x') and gs[8] == ' ':
         game_state[8] = 'o'
         return True
-    elif all_same(gs[1],gs[5],'x'):
+    elif all_same(gs[1],gs[5],'x') and gs[2] == ' ':
         game_state[2] = 'o'
         return True
     elif gs[0] == 'x' and gs[4] == 'o' and gs[8] == 'x':

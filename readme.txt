@@ -54,18 +54,34 @@ Run
 Now, in the VM, run "setup_system.sh" like so:
 
     yes 'yes' | sudo bash setup_system.sh	
-	
+
+Now setup your ssh-key to access the repo and clone the repo to:
+
+    /home/user/tic_tac_toe_verhulst
+
+Next, run the "local_setup.sh" file with:
+
+     bash local_setup.sh.
+
+Before you can run the server you will need to activate virtual environment with:
+       
+     . ENV/bin/activate
+
+Now you should be able to run the server with:
+
+    uwsgi --socket tic_tac_toe.sock --wsgi-file app/wsgi.py --chmod-socket=666        
+    	
 ###################################
 ###################################
 Misc commands
 
-To run the Django app via uwsgi:
-
-    uwsgi --socket tic_tac_toe.sock --wsgi-file app/wsgi.py --chmod-socket=666
-
-To restart networking:
+To restart ngnix:
 
     sudo /etc/init.d/nginx restart
+
+To reload ngnix's config file:
+
+    sudo /etc/init.d/nginx reload
 
 To run the Django app via it's builtin testing server:
    
