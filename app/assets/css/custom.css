@@ -17,6 +17,16 @@
     height: 900px;
     z-index: 0;
 }
+.game_box_cover {
+    position: absolute;
+    display: none;
+    left: 0px;
+    top: 0px;
+    width: 900px;
+    height: 900px;
+    z-index: 1;
+    background-color:rgba(255,255,255,0.8);
+}
 .game_cell {
     display: inline-block;
     text-align: center;

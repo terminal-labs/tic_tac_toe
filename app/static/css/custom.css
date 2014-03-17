@@ -1,5 +1,4 @@
 .no_selection {
-    /* I do not like playing the game if I can select stuff and get the blue selection box, so here it is disabled. */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -18,10 +17,20 @@
     height: 900px;
     z-index: 0;
 }
+.game_box_cover {
+    position: absolute;
+    display: none;
+    left: 0px;
+    top: 0px;
+    width: 900px;
+    height: 900px;
+    z-index: 1;
+    background-color:rgba(255,255,255,0.8);
+}
 .game_cell {
     display: inline-block;
     text-align: center;
-    font-size:1200%; /* The x's and o's in the game are just text characters, so I set their size to a large value that "looked about right".  */
+    font-size:1200%;
     width: 298px;
     height: 298px;
     z-index: 0;

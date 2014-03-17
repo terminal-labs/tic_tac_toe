@@ -23,7 +23,10 @@ function apply_game_engine_response(response_dict)
     });
     if(game_over_flag == 1) // Using int flags here instead of Python's True/False bool type for python/JS compatibility.
     {
-	alert("Game Over " + game_winner);
+	$('#cover').show();
+	if(game_winner == 'o') game_winner = 'Computer Won';
+	if(game_winner == 'draw') game_winner = 'it was a draw';
+	alert("Game Over: " + game_winner);
     }
 }
 
